@@ -11,12 +11,39 @@
 
 Ответ:
 
+Для выполнения этого задания мне понадобятся:
+```
+staff  first_name, last_name, store
+address  city
+customer   количество sum(customer) в каждом магазине (store)
+…делаем…
+```
+```
+SELECT CONCAT (s.first_name, ‘ ’, s.last_name) AS employee, s.store_id AS store, c1.city, COUNT(c.store_id) AS sum_customers
+FROM staff
+INNER JOIN address a ON a.address_id = s.address_id
+INNER JOIN city c1 ON a.city_id = c1.city_id
+INNER JOIN customer c ON s.store_id = c.store_id
+GROUP BY s.first_name, s.last_name, s.store_id, c1.city
+HAVING COUNT(c.store_id) > 300;
+```
+
+![screen1](https://github.com/KorolkovDenis/)
+
+
 ### Задание 2
 
 Получите количество фильмов, продолжительность которых больше средней продолжительности всех фильмов.
 
 Ответ:
 
+```
+SELECT COUNT(film_id)
+FROM film
+WHERE length > (SELECT AVG(length) FROM film);
+```
+
+![screen2](https://github.com/KorolkovDenis/)
 
 
 ### Задание 3
@@ -25,8 +52,20 @@
 
 Ответ:
 
+```
+SELECT MONTH(payment_date), COUNT(payment_id), SUM(amount)
+FROM payment
+GROUP BY MONTH(payment_date)
+ORDER BY SUM(amount) DESC
+LIMIT 1;
+```
 
+![screen3](https://github.com/KorolkovDenis/)
 
+### Были попытки сделать с подзапросом, но увы…
+
+![screen4](https://github.com/KorolkovDenis/)
+![screen5](https://github.com/KorolkovDenis/)
 
 ## Дополнительные задания (со звёздочкой*)
 Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
