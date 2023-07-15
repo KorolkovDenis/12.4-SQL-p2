@@ -28,7 +28,7 @@ GROUP BY s.first_name, s.last_name, s.store_id, c1.city
 HAVING COUNT(c.store_id) > 300;
 ```
 
-![screen1](https://github.com/KorolkovDenis/)
+![screen1](https://github.com/KorolkovDenis/12.4-SQL-p2/blob/main/screenshots/screen1.jpg)
 
 
 ### Задание 2
@@ -43,7 +43,7 @@ FROM film
 WHERE length > (SELECT AVG(length) FROM film);
 ```
 
-![screen2](https://github.com/KorolkovDenis/)
+![screen2](https://github.com/KorolkovDenis/12.4-SQL-p2/blob/main/screenshots/screen2.jpg)
 
 
 ### Задание 3
@@ -60,12 +60,12 @@ ORDER BY SUM(amount) DESC
 LIMIT 1;
 ```
 
-![screen3](https://github.com/KorolkovDenis/)
+![screen3](https://github.com/KorolkovDenis/12.4-SQL-p2/blob/main/screenshots/screen3.jpg)
 
 ### Были попытки сделать с подзапросом, но увы…
 
-![screen4](https://github.com/KorolkovDenis/)
-![screen5](https://github.com/KorolkovDenis/)
+![screen4](https://github.com/KorolkovDenis/12.4-SQL-p2/blob/main/screenshots/screen4.jpg)
+![screen5](https://github.com/KorolkovDenis/12.4-SQL-p2/blob/main/screenshots/screen5.jpg)
 
 ## Дополнительные задания (со звёздочкой*)
 Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
