@@ -53,9 +53,9 @@ WHERE length > (SELECT AVG(length) FROM film);
 Ответ:
 
 ```
-SELECT MONTH(payment_date), COUNT(payment_id), SUM(amount)
+SELECT MONTH(payment_date), YEAR(payment_date), COUNT(payment_id), SUM(amount)
 FROM payment
-GROUP BY MONTH(payment_date)
+GROUP BY MONTH(payment_date), YEAR(payment_date)
 ORDER BY SUM(amount) DESC
 LIMIT 1;
 ```
